@@ -2,6 +2,7 @@
 
 .navi {
     height: 100px;
+    width: 100%;
     border-bottom: 1px solid black;
     .navi-container {
         display: flex;
@@ -11,7 +12,7 @@
         justify-content: space-between;
         padding: 0 1rem;
         font-weight: bold;
-        @include media('<=phone') {
+        @include media('>=phone', '<=tablet') {
             justify-content: center;
         }
         span {

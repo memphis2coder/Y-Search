@@ -1,13 +1,18 @@
 import React from 'react';
-import Navbar from '../Navbar/Navbar';
+import Title from '../Title/Title';
 import SearchBar from '../SearchBar/SearchBar';
+import SearchSuggestions from '../SearchSuggestions/SearchSuggestions';
+
+// styles
+import './LandingPage.scss';
 
 function LandingPage() {
     return (
         <div>
-        <Navbar />
-            <div className="main">
+            <div className="landingPage">
+                <Title />
                 <SearchBar />
+                <SearchSuggestions />
             </div>
         </div>
     );

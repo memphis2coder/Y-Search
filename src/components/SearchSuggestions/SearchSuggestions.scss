@@ -1,0 +1,16 @@
+.searchSuggestions {
+    display: flex;
+    padding: 1rem;
+    text-align: center;
+    .icon {
+        padding-right: 10px;
+    }
+}
+
+.suggestion {
+    margin-right: 30px;
+}
+
+.suggestion:last-child {
+    margin-right: 0;
+}
