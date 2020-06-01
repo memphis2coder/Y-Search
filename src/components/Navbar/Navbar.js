@@ -1,25 +1,13 @@
 import React from 'react';
+import SearchBar from '../SearchBar/SearchBar';
 
+// styles
 import './Navbar.scss';
 
 function Navigation() {
     return (
         <div className="navi">
-            <div className="navi-container container">
-                <div>
-                    <span>Write a Review</span>
-                    <span>Events</span>
-                </div>
-                <div>
-                    <span>Log In</span>
-                    <span>
-                        <button>
-                            Sign Up
-                        </button>
-                    </span>
-                    
-                </div>
-            </div>
+            <SearchBar />
         </div>
     )
 };

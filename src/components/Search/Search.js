@@ -1,4 +1,6 @@
 import React from 'react';
+import Navbar from '../Navbar/Navbar';
+import SearchResults from '../SearchResults/SearchResults';
 
 // styles
 import './Search.scss';
@@ -6,7 +8,10 @@ import './Search.scss';
 function Search() {
     return (
         <div className="search">
-            search results
+            <Navbar />
+                <div className="container">
+                    <SearchResults />
+                </div>
         </div>
     );
 };

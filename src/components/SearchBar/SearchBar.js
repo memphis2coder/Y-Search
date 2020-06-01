@@ -8,18 +8,18 @@ function SearchBar() {
             <div className="container notification">
                 <div className="field has-addons">
                     <p className="control">
-                        <button className="button">Search</button>
+                        <button className="button is-small">Search</button>
                     </p>
                     <p className="control">
-                        <input className="input" type="text" placeholder="burger, pizza, taco" />
+                        <input className="input is-small" type="text" placeholder="burger, pizza, taco" />
                     </p>
                     <p className="control">
-                        <button className="button">Near</button>
+                        <button className="button is-small">Near</button>
                     </p>
                     <p className="control">
-                        <input class="input" type="text" placeholder="location" />
+                        <input class="input is-small" type="text " placeholder="location" />
                     </p>
-                    <p className="button is-danger">
+                    <p className="button is-danger is-small">
                         <span className="icon is-small">
                             <i class="fas fa-search"></i>
                         </span>

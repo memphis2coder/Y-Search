@@ -3,6 +3,7 @@ import Title from '../Title/Title';
 import SearchBar from '../SearchBar/SearchBar';
 import SearchSuggestions from '../SearchSuggestions/SearchSuggestions';
 
+
 // styles
 import './LandingPage.scss';
 
@@ -13,6 +14,7 @@ function LandingPage() {
                 <Title />
                 <SearchBar />
                 <SearchSuggestions />
+                
             </div>
         </div>
     );
