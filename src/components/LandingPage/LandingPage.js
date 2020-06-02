@@ -14,7 +14,6 @@ function LandingPage() {
                 <Title />
                 <SearchBar />
                 <SearchSuggestions />
-                
             </div>
         </div>
     );
