@@ -9,6 +9,10 @@ function SearchBar(props) {
     // form submit
     function submit(e) {
         e.preventDefault();
+        // check if props has been passed 
+        if (typeof props.search == 'function') { // function located in landingPage.js
+            props.search(term, location)
+        }
         console.log(term, location)
     };
 
