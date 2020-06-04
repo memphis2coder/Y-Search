@@ -16,6 +16,7 @@ function LandingPage() {
         history.push(`/search?find_desc=${urlEncodedTerm}&find_loc=${urlEncodedLocation}`);
     };
 
+    // fetch data from yelp fusion api
     return (
         <div>
             <div className="landingPage">

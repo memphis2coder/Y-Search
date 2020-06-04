@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 
+
 import './SearchBar.scss';
 
 function SearchBar(props) {
@@ -28,7 +29,10 @@ function SearchBar(props) {
                             <input className="input is-small"
                                 onChange={(e) => setTerm(e.target.value)}
                                 type="text" 
-                                placeholder="burger, pizza, taco" />
+                                value={term}
+                                placeholder="delivery, takeout..."
+                                required
+                                />
                         </p>
                         <div className="control">
                             <div className="button is-small">Near</div>
@@ -37,9 +41,12 @@ function SearchBar(props) {
                             <input className="input is-small" 
                                 onChange={(e) => setLocation(e.target.value)}
                                 type="text " 
-                                placeholder="location" />
+                                value={location}
+                                placeholder='location...'
+                                required     
+                                />
                         </p>
-                        <button type="submit" className="button is-danger is-small" onClick={submit}>
+                        <button type="submit" className="button is-warning is-small" onClick={submit}>
                             <span className="icon is-small">
                                 <i className="fas fa-search"></i>
                             </span>

@@ -2,8 +2,9 @@ import React from 'react';
 
 // styles
 import './SearchResult.scss';
+import { useBusinessSearch } from '../../config/useBusinessSearch';
 
-function SearchResult() {
+function SearchResult(props) {
     return (
         <div className="search-result">
             <div className="card">

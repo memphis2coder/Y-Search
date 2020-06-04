@@ -1,6 +1,8 @@
 @import '../../styles/breakpoints';
 
 .search {
+    display: flex;
+    flex-direction: column;
     @include media('>phone') {
         .button {
             font-size: 1rem;

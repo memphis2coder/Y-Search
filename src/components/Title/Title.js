@@ -6,7 +6,7 @@ import './Title.scss';
 function Title() {
     return (
         <div>
-            <h1 className="title">Yelp</h1>
+            <h1 className="title" style={{color: "yellow", textDecoration: "underline"}}>Yellow Pages</h1>
         </div>
     );
 };
