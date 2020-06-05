@@ -1,20 +1,35 @@
+@import '../../styles/breakpoints';
+
 .search-result {
     display: flex;
-    justify-content: center;
     .card {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         padding: 1rem;
         border-radius: 5px;
-        .card--text {
-            margin-left: 10px;
-            .card--title {
-                font-size: 2rem;
-                font-weight: bold;
-            }
-            .card--info {
-                color: grey;
-            }
+        width: 100%;
+        @include media('<=phone') {
+            flex-direction: column;
+            text-align: center;
+        }
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 5px;
         }
     }
+}
+
+.card--text {
+    padding: 1rem;
+}
+
+.card--title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card--details {
+    padding: 1rem;
 }

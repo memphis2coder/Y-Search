@@ -2,18 +2,27 @@ import React from 'react';
 
 // styles
 import './SearchResult.scss';
-import { useBusinessSearch } from '../../config/useBusinessSearch';
+
 
 function SearchResult(props) {
+    if (!props.business) {
+        return (<div/>)
+    }
+
     return (
         <div className="search-result">
             <div className="card">
-            <img src="https://via.placeholder.com/150" alt="business "/>
+            <img src={props.business.image_url} alt="business"/>
                 <div className="card--text">
-                    <p className="card--title">Title</p>
-                    <p className="card--rating">rating</p>
-                    <p className="card--info">info</p>
-                    <div className="card--rating">rating</div>
+                    <p className="card--title">{props.business.name}</p>
+                    <p className="card--rating">{props.business.rating} / 5</p>
+                    <p className="card--price">{props.business.price}</p>
+                    <p className="card--info">{props.business.phone}</p>
+                </div>
+                <div className="card--details">
+                    <p className="card--title">Address</p>
+                    <p className="card--address">{props.business.location.address1}</p>
+                    <p className="card--city">{props.business.location.city}, {props.business.location.state}</p>
                 </div>
             </div>
         </div>

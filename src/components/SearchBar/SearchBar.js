@@ -14,7 +14,6 @@ function SearchBar(props) {
         if (typeof props.search == 'function') { // function located in landingPage.js
             props.search(term, location)
         }
-        console.log(term, location)
     };
 
     return (

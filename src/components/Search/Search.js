@@ -10,22 +10,37 @@ import './Search.scss';
 
 
 // search webpage
-function Search() {
+function Search(props) {
     // pass down the current term and location to searchResults
-    const {location} = useReactRouter();
+    const {location, history} = useReactRouter();
     const params = new URLSearchParams(location.search);
     const term = params.get('find_desc');
     const locationParam = params.get('find_loc')
     const [businesses, amountResults, searchParams, setSearchParams] = useBusinessSearch(term, locationParam);
     
+    // function to make searchbar work in search page
+    function search(term,location) {
+        // redirect the user to update https
+        const encodedTerm = encodeURI(term);
+        const encodedLocation = encodeURI(location);
+        history.push(`/search?find_desc=${encodedTerm}&find_loc=${encodedLocation}`)
+        setSearchParams({term, location})
+    }
+
+
+
     return (
         <div className="search">
             <div className="container">
                 <Link to='/'><Title /></Link>
             </div>
-            <SearchBar term={term} location={locationParam} />
+            <SearchBar term={term} location={locationParam} search={search}/>
                 <div className="container">
-                    <SearchResults term={term} location={locationParam} businesses={businesses}/>
+                    <SearchResults term={term} 
+                                location={locationParam} 
+                                businesses={businesses} 
+                                amountResults={amountResults}
+                    />
                 </div>
         </div>
     );
