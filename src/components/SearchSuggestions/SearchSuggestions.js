@@ -5,7 +5,7 @@ function SearchSuggestions() {
     return (
         <div className="searchSuggestions">
             <div className="container">
-
+            
                 <span className="icon is-small">
                     <i className="fas fa-utensils"></i>
                 </span>

@@ -29,8 +29,7 @@ function SearchBar(props) {
                                 onChange={(e) => setTerm(e.target.value)}
                                 type="text" 
                                 value={term}
-                                placeholder="delivery, takeout..."
-                                required
+                                placeholder="restaurant..."
                                 />
                         </p>
                         <div className="control">
@@ -41,8 +40,7 @@ function SearchBar(props) {
                                 onChange={(e) => setLocation(e.target.value)}
                                 type="text " 
                                 value={location}
-                                placeholder='location...'
-                                required     
+                                placeholder='location...'     
                                 />
                         </p>
                         <button type="submit" className="button is-warning is-small" onClick={submit}>

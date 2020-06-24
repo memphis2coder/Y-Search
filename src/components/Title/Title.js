@@ -6,7 +6,7 @@ import './Title.scss';
 function Title() {
     return (
         <div>
-            <h1 className="title" style={{color: "yellow", textDecoration: "underline"}}>Food Search</h1>
+            <h4 className="title" style={{color: "gold"}}>Find your next restaurant</h4>
         </div>
     );
 };
