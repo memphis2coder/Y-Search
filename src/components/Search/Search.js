@@ -20,11 +20,18 @@ function Search(props) {
     
     // function to make searchbar work in search page
     function search(term,location) {
+        // require input fields 
+        if (term.length === 0 || location.length === 0) {
+            alert("Please fill out all fields")
+        }
+        
         // redirect the user to update https
         const encodedTerm = encodeURI(term);
         const encodedLocation = encodeURI(location);
         history.push(`/search?find_desc=${encodedTerm}&find_loc=${encodedLocation}`)
         setSearchParams({term, location})
+
+        
     }
 
 
