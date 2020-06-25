@@ -10,7 +10,7 @@ function SearchSuggestions() {
                     <i className="fas fa-utensils"></i>
                 </span>
                 <span className="suggestion">
-                    Resturants
+                    Restaurants
                 </span>
                 
                 <span className="icon is-small">
